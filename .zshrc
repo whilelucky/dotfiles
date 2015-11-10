@@ -85,10 +85,10 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshrc="vi ~/.zshrc"
+alias vimrc="vi ~/.vimrc"
+alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.oh-my-zsh/custom/base16-oceanicnext.dark.sh"
