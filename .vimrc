@@ -33,6 +33,7 @@
   NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'scrooloose/nerdtree'
   NeoBundle 'ctrlpvim/ctrlp.vim'
+  NeoBundle 'tpope/vim-fugitive'
   NeoBundle 'bling/vim-airline'
   NeoBundle 'othree/yajs.vim'
   NeoBundle 'tpope/vim-surround'
@@ -72,8 +73,8 @@
     " --multiple-cursor
       let g:multi_cursor_use_default_mapping=0
       let g:multi_cursor_next_key='<C-d>'
-      let g:multi_cursor_prev_key='<C-D>'
-      let g:multi_cursor_skip_key='<C-x>'
+      let g:multi_cursor_prev_key='<C-x>'
+      "let g:multi_cursor_skip_key='<C-x>'
       let g:multi_cursor_quit_key='<Esc>'
 
 " stay in vmode on indent
