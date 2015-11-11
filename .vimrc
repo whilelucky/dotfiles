@@ -19,7 +19,7 @@
  set showcmd
  inoremap <Esc> <nop>
  inoremap lk <Esc>
- nnoremap <C-w> :w<Enter>
+ nnoremap <Leader>w :w<Enter>
 
  "stay in vmode on indent
    vnoremap < <gv
@@ -55,10 +55,9 @@
 
 "buffer navigation
   set hidden
-  nnoremap <C-]> :bnext<CR>
-  "nnoremap <C-[> :bprevious<CR>
-  inoremap <C-]> <Esc>:bnext<CR>
-  inoremap <C-[> <Esc>:bprevious<CR>
+  nnoremap <Leader>q :bp <Bar> bd #<CR>
+  nnoremap <Leader>f :bnext<CR>
+  nnoremap <Leader>a :bprevious<CR>
 
 "neobundle
 if 0 | endif
@@ -98,7 +97,7 @@ NeoBundleCheck
 "--ctrlp
   "nnoremap <C-p> :CtrlP<Enter>
   let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site|node_modules)$',
+    \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules|build)$',
     \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
   \}
 "--airline
