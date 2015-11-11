@@ -55,9 +55,9 @@
 
 "buffer navigation
   set hidden
-  nnoremap <Leader>q :bp <Bar> bd #<CR>
   nnoremap <Leader>f :bnext<CR>
   nnoremap <Leader>a :bprevious<CR>
+  nnoremap <Leader>q :bd <Bar> bprevious <CR>
 
 "neobundle
 if 0 | endif
