@@ -84,6 +84,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'Raimondi/delimitMate'
 
 call neobundle#end()
 filetype plugin indent on
@@ -123,4 +124,6 @@ NeoBundleCheck
   let g:multi_cursor_prev_key='<C-x>'
   "let g:multi_cursor_skip_key='<C-x>'
   let g:multi_cursor_quit_key='<Esc>'
-
+"--delimitMate
+  let delimitMate_expand_cr = 1
+  let delimitMate_expand_space = 1
