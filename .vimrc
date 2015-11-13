@@ -85,32 +85,43 @@
   let NERDTreeQuitOnOpen = 1
   let NERDTreeAutoDeleteBuffer = 1
   let NERDTreeMinimalUI = 1
+
 "--ctrlp
   let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules|build)$',
     \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
-  \}
+  \ }
+
 "--airline
   let g:airline_powerline_fonts = 1
-  let g:airline#extensions#tabline#enabled = 1
-  let g:airline#extensions#tabline#tab_nr_type = 1
   set laststatus=2
+
 "--neomake
-  let g:neomake_javascript_semistandard_maker = {
-    \ 'errorformat': '  %f:%l:%c: %m',
-  \}
-  let g:neomake_javascript_enabled_makers = ['semistandard']
+  let g:neomake_open_list = 2
+  let g:neomake_list_height = 3
   autocmd! BufWritePost * Neomake
+  let g:neomake_error_sign = {
+    \ 'text': '✖>',
+    \ 'texthl': 'SignifySignDelete',
+  \ }
+  let g:neomake_javascript_semistandard_maker = {
+    \ 'errorformat': '%f:%l:%c: %m',
+  \ }
+  let g:neomake_javascript_enabled_makers = ['semistandard']
+
 "--better-whitespace
   autocmd BufWritePre * StripWhitespace
+
 "--multiple-cursor
   let g:multi_cursor_use_default_mapping=0
   let g:multi_cursor_next_key='<C-d>'
   let g:multi_cursor_prev_key='<C-x>'
   "let g:multi_cursor_skip_key='<C-x>'
   let g:multi_cursor_quit_key='<Esc>'
+
 "--delimitMate
   let delimitMate_expand_cr = 1
   let delimitMate_expand_space = 1
+
 "--nerdcommenter
   let NERDSpaceDelims=1
