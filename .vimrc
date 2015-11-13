@@ -1,5 +1,5 @@
 "automatic reloading of .vimrc
-  "autocmd! bufwritepost .vimrc source %
+  autocmd! bufwritepost .vimrc so % | AirlineRefresh
 
 "colorscheme
   set background=dark
@@ -9,7 +9,7 @@
   colorscheme base16-oceanicnext
 
 "general-settings
-  let mapleader=","
+  let mapleader="\<Space>"
   set nowrap
   set timeoutlen=500 ttimeoutlen=0
   set history=1000
@@ -17,6 +17,7 @@
   set relativenumber
   set cursorline
   set showcmd
+  set scrolloff=5
   filetype plugin indent on
   inoremap <Esc> <nop>
   inoremap lk <Esc>
@@ -56,8 +57,8 @@
 
 "buffer navigation
   set hidden
-  nnoremap <Leader>f :bnext<CR>
-  nnoremap <Leader>a :bprevious<CR>
+  nnoremap <Leader>; :bnext<CR>
+  nnoremap <Leader>j :bprevious<CR>
   nnoremap <Leader>q :bd <Bar> bprevious <CR>
 
 "vim-plug
@@ -70,11 +71,12 @@
   Plug 'othree/yajs.vim'
   Plug 'tpope/vim-surround'
   Plug 'benekastah/neomake'
-  "Plug 'Valloric/YouCompleteMe'
+  Plug 'ervandew/supertab'
   Plug 'mattn/emmet-vim'
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'Raimondi/delimitMate'
+  Plug 'scrooloose/nerdcommenter'
 
   call plug#end()
 
@@ -110,3 +112,5 @@
 "--delimitMate
   let delimitMate_expand_cr = 1
   let delimitMate_expand_space = 1
+"--nerdcommenter
+  let NERDSpaceDelims=1
