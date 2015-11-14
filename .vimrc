@@ -14,11 +14,13 @@
   set timeoutlen=500 ttimeoutlen=0
   set history=1000
   set undolevels=1000
+  set number
   set relativenumber
   set cursorline
   set showcmd
   set scrolloff=5
   filetype plugin indent on
+  nnoremap <Enter> G
   inoremap <Esc> <nop>
   inoremap lk <Esc>
   nnoremap <Leader>w :w<Enter>
@@ -57,9 +59,9 @@
 
 "buffer navigation
   set hidden
-  nnoremap <Leader>; :bnext<CR>
-  nnoremap <Leader>j :bprevious<CR>
-  nnoremap <Leader>q :bd <Bar> bprevious <CR>
+  nnoremap <Leader>; :bnext<Enter>
+  nnoremap <Leader>j :bprevious<Enter>
+  nnoremap <Leader>q :bd <Bar> bprevious<Enter>
 
 "vim-plug
   call plug#begin('~/.vim/plugged')
@@ -125,4 +127,4 @@
   let delimitMate_expand_space = 1
 
 "--nerdcommenter
-  let NERDSpaceDelims=1
+  let NERDSpaceDelims = 1
