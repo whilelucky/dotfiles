@@ -19,6 +19,7 @@
   set cursorline
   set showcmd
   set scrolloff=5
+  set mouse=
   filetype plugin indent on
   nnoremap <Enter> G
   inoremap <Esc> <nop>
@@ -61,16 +62,15 @@
   set hidden
   nnoremap <Leader>; :bnext<Enter>
   nnoremap <Leader>j :bprevious<Enter>
-  nnoremap <Leader>q :bd <Bar> bprevious<Enter>
+  nnoremap <Leader>q :bd<Enter>
 
 "vim-plug
   call plug#begin('~/.vim/plugged')
 
-  Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+  Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'tpope/vim-fugitive'
   Plug 'bling/vim-airline'
-  Plug 'othree/yajs.vim'
   Plug 'tpope/vim-surround'
   Plug 'benekastah/neomake'
   Plug 'ervandew/supertab'
@@ -78,7 +78,9 @@
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'Raimondi/delimitMate'
-  Plug 'scrooloose/nerdcommenter'
+  Plug 'tpope/vim-commentary'
+  Plug 'othree/yajs.vim', {'for': ['javascript']}
+  Plug 'mxw/vim-jsx', {'for': ['javascript']}
 
   call plug#end()
 
@@ -126,5 +128,5 @@
   let delimitMate_expand_cr = 1
   let delimitMate_expand_space = 1
 
-"--nerdcommenter
-  let NERDSpaceDelims = 1
+"--vim-jsx
+  let g:jsx_ext_required = 0
