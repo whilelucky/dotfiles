@@ -58,11 +58,13 @@
   noremap <left> <nop>
   noremap <right> <nop>
 
-"buffer navigation
+"buffer
   set hidden
   nnoremap <Leader>; :bnext<Enter>
   nnoremap <Leader>j :bprevious<Enter>
   nnoremap <Leader>q :bd<Enter>
+  au FocusGained,BufEnter * :silent! !
+  au FocusLost,BufLeave * :silent! w
 
 "vim-plug
   call plug#begin('~/.vim/plugged')
@@ -112,10 +114,14 @@
   let g:neomake_javascript_semistandard_maker = {
     \ 'errorformat': '%f:%l:%c: %m',
   \ }
+  let g:neomake_jsx_semistandard_maker = {
+    \ 'errorformat': '%f:%l:%c: %m',
+  \ }
   let g:neomake_javascript_enabled_makers = ['semistandard']
+  let g:neomake_jsx_enabled_makers = ['semistandard']
 
 "--better-whitespace
-  autocmd BufWritePre * StripWhitespace
+  autocmd! BufWritePre * StripWhitespace
 
 "--multiple-cursor
   let g:multi_cursor_use_default_mapping=0
@@ -127,6 +133,3 @@
 "--delimitMate
   let delimitMate_expand_cr = 1
   let delimitMate_expand_space = 1
-
-"--vim-jsx
-  let g:jsx_ext_required = 0
