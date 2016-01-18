@@ -64,7 +64,7 @@
   nnoremap <Leader>j :bprevious<Enter>
   nnoremap <Leader>q :bd<Enter>
   au FocusGained,BufEnter * :silent! !
-  au FocusLost,BufLeave * :silent! w
+"  au FocusLost,BufLeave * :silent! w
 
 "vim-plug
   call plug#begin('~/.vim/plugged')
@@ -75,7 +75,7 @@
   Plug 'bling/vim-airline'
   Plug 'tpope/vim-surround'
   Plug 'benekastah/neomake'
-  Plug 'ervandew/supertab'
+  Plug 'Valloric/YouCompleteMe'
   Plug 'mattn/emmet-vim'
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'terryma/vim-multiple-cursors'
@@ -119,6 +119,11 @@
   \ }
   let g:neomake_javascript_enabled_makers = ['semistandard']
   let g:neomake_jsx_enabled_makers = ['semistandard']
+
+"--YouCompleteMe
+  let g:python_host_prog = '/usr/bin/python'
+  let g:ycm_add_preview_to_completeopt = 0
+  set completeopt-=preview
 
 "--better-whitespace
   autocmd! BufWritePre * StripWhitespace
