@@ -124,6 +124,9 @@
   let g:python_host_prog = '/usr/bin/python'
   let g:ycm_add_preview_to_completeopt = 0
   set completeopt-=preview
+  let g:ycm_semantic_triggers = {
+    \ 'css' : ['re!\w*']
+  \ }
 
 "--better-whitespace
   autocmd! BufWritePre * StripWhitespace
