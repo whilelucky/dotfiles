@@ -82,7 +82,8 @@
   Plug 'Raimondi/delimitMate'
   Plug 'tpope/vim-commentary'
   Plug 'othree/yajs.vim', {'for': ['javascript', 'javascript.jsx']}
-  Plug 'mxw/vim-jsx', {'for': ['javascript.jsx']}
+  Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
+  Plug 'mxw/vim-jsx', {'for': ['javascript', 'javascript.jsx']}
 
   call plug#end()
 
