@@ -64,7 +64,7 @@
   nnoremap <Leader>j :bprevious<Enter>
   nnoremap <Leader>q :bd<Enter>
   au FocusGained,BufEnter * :silent! !
-"  au FocusLost,BufLeave * :silent! w
+  "au FocusLost,BufLeave * :silent! w
 
 "vim-plug
   call plug#begin('~/.vim/plugged')
@@ -81,8 +81,8 @@
   Plug 'terryma/vim-multiple-cursors'
   Plug 'Raimondi/delimitMate'
   Plug 'tpope/vim-commentary'
-  Plug 'othree/yajs.vim', {'for': ['javascript']}
-  Plug 'mxw/vim-jsx', {'for': ['javascript']}
+  Plug 'othree/yajs.vim', {'for': ['javascript', 'javascript.jsx']}
+  Plug 'mxw/vim-jsx', {'for': ['javascript.jsx']}
 
   call plug#end()
 
@@ -114,10 +114,10 @@
   let g:neomake_javascript_semistandard_maker = {
     \ 'errorformat': '%f:%l:%c: %m',
   \ }
+  let g:neomake_javascript_enabled_makers = ['semistandard']
   let g:neomake_jsx_semistandard_maker = {
     \ 'errorformat': '%f:%l:%c: %m',
   \ }
-  let g:neomake_javascript_enabled_makers = ['semistandard']
   let g:neomake_jsx_enabled_makers = ['semistandard']
 
 "--YouCompleteMe
@@ -141,3 +141,6 @@
 "--delimitMate
   let delimitMate_expand_cr = 1
   let delimitMate_expand_space = 1
+
+"--vim-jsx
+  let g:jsx_ext_required = 0
