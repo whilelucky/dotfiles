@@ -81,9 +81,8 @@
   Plug 'terryma/vim-multiple-cursors'
   Plug 'Raimondi/delimitMate'
   Plug 'tpope/vim-commentary'
-  Plug 'othree/yajs.vim', {'for': ['javascript', 'javascript.jsx']}
-  Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
-  Plug 'mxw/vim-jsx', {'for': ['javascript', 'javascript.jsx']}
+  Plug 'sheerun/vim-polyglot'
+  Plug 'posva/vim-vue'
 
   call plug#end()
 
@@ -94,6 +93,7 @@
   let NERDTreeMinimalUI = 1
 
 "--ctrlp
+  let g:ctrlp_show_hidden = 1
   let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules|build)$',
     \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
@@ -126,7 +126,7 @@
   let g:ycm_add_preview_to_completeopt = 0
   set completeopt-=preview
   let g:ycm_semantic_triggers = {
-    \ 'css' : ['re!\w*']
+    \ 'css,scss' : ['re!\w*']
   \ }
 
 "--better-whitespace
