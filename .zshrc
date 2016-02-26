@@ -89,8 +89,8 @@ source $ZSH/oh-my-zsh.sh
 # alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias vi="nvim"
 alias vim="nvim"
-alias zshrc="vi ~/dotfiles/.zshrc"
-alias vimrc="vi ~/dotfiles/.vimrc"
+alias zshrc="cd ~/dotfiles && vi .zshrc"
+alias vimrc="cd ~/dotfiles && vi .vimrc"
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.oh-my-zsh/custom/base16-oceanicnext.dark.sh"
