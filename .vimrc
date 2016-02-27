@@ -18,6 +18,8 @@
   set relativenumber
   set cursorline
   set showcmd
+  set lazyredraw
+  set ttyfast
   set scrolloff=5
   set mouse=
   filetype plugin indent on
