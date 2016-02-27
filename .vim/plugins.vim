@@ -17,6 +17,7 @@
   Plug 'tpope/vim-commentary'
   Plug 'othree/html5.vim', {'for': ['html', 'vue']}
   Plug 'othree/yajs.vim', {'for': ['javascript.jsx', 'vue']}
+  Plug 'gavocanov/vim-js-indent', {'for': ['javascript.jsx', 'vue']}
   Plug 'mxw/vim-jsx', {'for': ['javascript.jsx', 'vue']}
   Plug 'posva/vim-vue'
 
