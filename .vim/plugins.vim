@@ -6,6 +6,7 @@
   Plug 'tpope/vim-fugitive'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'easymotion/vim-easymotion'
   Plug 'tpope/vim-surround'
   Plug 'benekastah/neomake'
   Plug 'Valloric/YouCompleteMe'
@@ -15,10 +16,10 @@
   Plug 'terryma/vim-multiple-cursors'
   Plug 'Raimondi/delimitMate'
   Plug 'tpope/vim-commentary'
-  Plug 'othree/html5.vim', {'for': ['html', 'vue']}
-  Plug 'othree/yajs.vim', {'for': ['javascript.jsx', 'vue']}
-  Plug 'gavocanov/vim-js-indent', {'for': ['javascript.jsx', 'vue']}
-  Plug 'mxw/vim-jsx', {'for': ['javascript.jsx', 'vue']}
+  Plug 'othree/html5.vim'
+  Plug 'othree/yajs.vim'
+  Plug 'gavocanov/vim-js-indent'
+  Plug 'mxw/vim-jsx'
   Plug 'posva/vim-vue'
 
   call plug#end()
@@ -40,6 +41,11 @@
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#tabline#enabled = 1
   set laststatus=2
+
+"--vim-easymotion
+  let g:EasyMotion_do_mapping = 0
+  let g:EasyMotion_smartcase = 1
+  nmap s <Plug>(easymotion-s2)
 
 "--neomake
   let g:neomake_open_list = 2
