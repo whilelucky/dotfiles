@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-commentary'
   Plug 'othree/html5.vim'
   Plug 'othree/yajs.vim'
+  Plug 'othree/es.next.syntax.vim'
   Plug 'gavocanov/vim-js-indent'
   Plug 'mxw/vim-jsx'
   Plug 'posva/vim-vue'
