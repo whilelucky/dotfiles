@@ -1,1 +1,1 @@
-/Users/lakshya/dotfiles/.vimrc
+../.vimrc
