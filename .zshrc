@@ -91,7 +91,3 @@ alias vi="nvim"
 alias vim="nvim"
 alias zshrc="cd ~/dotfiles && vi .zshrc"
 alias vimrc="cd ~/dotfiles && vi .vimrc"
-
-# Base16 Shell
-# BASE16_SHELL="$HOME/.oh-my-zsh/custom/base16-oceanicnext.dark.sh"
-# [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
