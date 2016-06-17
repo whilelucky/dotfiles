@@ -49,15 +49,23 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm zsh-syntax-highlighting z)
+plugins=(git nvm zsh-syntax-highlighting z virtualenv virtualenvwrapper)
 
 # User configuration
 DEFAULT_USER="lakshya"
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-export PATH=/Applications/MAMP/bin/php/php5.5.14/bin:$PATH
+# MAMP php
+export PATH=/Applications/MAMP/bin/php/php7.0.0/bin:$PATH
 
+# Postgres.app
+export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
+
+# brew install rabbitmq
+export PATH=$PATH:/usr/local/sbin
+
+# android studio tools & sdk
 export ANDROID_HOME=/Users/lakshya/Library/Android/sdk
 export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 
@@ -89,5 +97,5 @@ source $ZSH/oh-my-zsh.sh
 # alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias vi="nvim"
 alias vim="nvim"
-alias zshrc="cd ~/dotfiles && vi .zshrc"
+alias zshrc="cd ~/dotfiles && vi .zshrc && source .zshrc"
 alias vimrc="cd ~/dotfiles && vi .vimrc"

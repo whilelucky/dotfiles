@@ -59,17 +59,32 @@ call plug#end()
     \ 'text': '✖>',
     \ 'texthl': 'SignifySignDelete',
   \ }
-  let g:neomake_javascript_semistandard_maker = {
+  " eslint or semistandard
+  if findfile('.eslintrc', '.;') !=# ''
+    let g:neomake_javascript_eslint_exe =  $PWD . '/node_modules/.bin/eslint'
+    let g:neomake_javascript_enabled_makers = ['eslint']
+    let g:neomake_jsx_enabled_makers = ['eslint']
+  else
+    let g:neomake_javascript_semistandard_maker = {
+      \ 'errorformat': '%f:%l:%c: %m',
+    \ }
+    let g:neomake_jsx_semistandard_maker = {
+      \ 'errorformat': '%f:%l:%c: %m',
+    \ }
+    let g:neomake_javascript_enabled_makers = ['semistandard']
+    let g:neomake_jsx_enabled_makers = ['semistandard']
+  endif
+  " stylelint
+  if findfile('.stylelintrc', '.;') !=# ''
+    let g:neomake_css_stylelint_maker = {
     \ 'errorformat': '%f:%l:%c: %m',
-  \ }
-  let g:neomake_javascript_enabled_makers = ['semistandard']
-  let g:neomake_jsx_semistandard_maker = {
-    \ 'errorformat': '%f:%l:%c: %m',
-  \ }
-  let g:neomake_jsx_enabled_makers = ['semistandard']
+    \ 'exe': $PWD . '/node_modules/.bin/stylelint'
+    \ }
+    let g:neomake_css_enabled_makers = ['stylelint']
+  endif
 
 "YouCompleteMe
-  let g:python_host_prog = '/usr/bin/python'
+  let g:python_host_prog = '/usr/local/bin/python'
   let g:ycm_add_preview_to_completeopt = 0
   set completeopt-=preview
   let g:ycm_semantic_triggers = {
