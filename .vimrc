@@ -160,7 +160,7 @@ call plug#end()
   set tabstop=2
   set softtabstop=2
   set shiftwidth=2
-  set expandtab
+  " set expandtab
   set shiftround
   set smartindent
   nnoremap <Leader>l :set list!<Enter>
