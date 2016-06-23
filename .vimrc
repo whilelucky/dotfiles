@@ -164,7 +164,7 @@ call plug#end()
   set shiftround
   set smartindent
   nnoremap <Leader>l :set list!<Enter>
-  set listchars=tab:▸\ ,space:•,trail:-,nbsp:+
+  set listchars=tab:»\ ,space:·,trail:-,nbsp:+
   nnoremap <Leader>ft :set ts=4<Enter> :%retab!<Enter> :set ts=2<Enter> :%retab!<Enter>
 
 "search settings
