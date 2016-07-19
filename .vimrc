@@ -96,8 +96,8 @@ call plug#end()
   autocmd! BufWritePre * StripWhitespace
 
 "vim-smooth-scroll
-  noremap <silent> <C-l> :call smooth_scroll#up(10, 15, 1)<CR>
-  noremap <silent> <C-k> :call smooth_scroll#down(10, 15, 1)<CR>
+  noremap <silent> <C-l> :call smooth_scroll#up(15, 0, 1)<CR>
+  noremap <silent> <C-k> :call smooth_scroll#down(15, 0, 1)<CR>
 
 "multiple-cursor
   let g:multi_cursor_use_default_mapping=0
