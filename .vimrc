@@ -35,7 +35,7 @@ call plug#end()
 "ctrlp
   let g:ctrlp_show_hidden = 1
   let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules|build)$',
+    \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules|build|dist)$',
     \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
   \ }
 
@@ -62,26 +62,19 @@ call plug#end()
   \ }
   " eslint or semistandard
   if findfile('.eslintrc', '.;') !=# ''
-  let g:neomake_javascript_eslint_exe =  $PWD . '/node_modules/.bin/eslint'
-  let g:neomake_javascript_enabled_makers = ['eslint']
-  let g:neomake_jsx_enabled_makers = ['eslint']
+    let g:neomake_javascript_eslint_exe =  $PWD . '/node_modules/.bin/eslint'
+    let g:neomake_javascript_enabled_makers = ['eslint']
+    let g:neomake_jsx_enabled_makers = ['eslint']
   else
-  let g:neomake_javascript_semistandard_maker = {
-    \ 'errorformat': '%f:%l:%c: %m',
-  \ }
-  let g:neomake_jsx_semistandard_maker = {
-    \ 'errorformat': '%f:%l:%c: %m',
-  \ }
-  let g:neomake_javascript_enabled_makers = ['semistandard']
-  let g:neomake_jsx_enabled_makers = ['semistandard']
+    let g:neomake_javascript_semistandard_maker = { 'errorformat': '%f:%l:%c: %m' }
+    let g:neomake_jsx_semistandard_maker = { 'errorformat': '%f:%l:%c: %m' }
+    let g:neomake_javascript_enabled_makers = ['semistandard']
+    let g:neomake_jsx_enabled_makers = ['semistandard']
   endif
   " stylelint
   if findfile('.stylelintrc', '.;') !=# ''
-  let g:neomake_css_stylelint_maker = {
-    \ 'errorformat': '%f:%l:%c: %m',
-    \ 'exe': $PWD . '/node_modules/.bin/stylelint'
-  \ }
-  let g:neomake_css_enabled_makers = ['stylelint']
+    let g:neomake_css_stylelint_exe = $PWD . 'node_modules/.bin/stylelint'
+    let g:neomake_css_enabled_makers = ['stylelint']
   endif
 
 "YouCompleteMe
@@ -96,8 +89,8 @@ call plug#end()
   autocmd! BufWritePre * StripWhitespace
 
 "vim-smooth-scroll
-  noremap <silent> <C-l> :call smooth_scroll#up(15, 0, 1)<CR>
-  noremap <silent> <C-k> :call smooth_scroll#down(15, 0, 1)<CR>
+  noremap <silent> <C-l> :call smooth_scroll#up(15, 1, 2)<CR>
+  noremap <silent> <C-k> :call smooth_scroll#down(15, 1, 2)<CR>
 
 "multiple-cursor
   let g:multi_cursor_use_default_mapping=0
@@ -140,8 +133,8 @@ call plug#end()
   set showcmd
   set lazyredraw
   set ttyfast
+  set mouse=a
   set scrolloff=5
-  "set mouse=
   filetype plugin indent on
   nnoremap <Enter> G
   inoremap <Esc> <nop>
