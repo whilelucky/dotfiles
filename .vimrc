@@ -3,9 +3,10 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
   Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'tpope/vim-fugitive'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'tpope/vim-fugitive'
   Plug 'easymotion/vim-easymotion'
   Plug 'tpope/vim-surround'
   Plug 'benekastah/neomake'
@@ -46,6 +47,9 @@ call plug#end()
   let g:airline_section_y = ''
   let g:airline_left_sep = ''
   let g:airline_right_sep = ''
+
+"vim-devicons
+  let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
 
 "vim-easymotion
   let g:EasyMotion_do_mapping = 0
