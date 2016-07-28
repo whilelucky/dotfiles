@@ -96,6 +96,6 @@ fi
 
 # alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias vi="nvim"
-alias vim="nvim"
+alias vim="vim"
 alias zshrc="cd ~/dotfiles && vi .zshrc && source .zshrc"
 alias vimrc="cd ~/dotfiles && vi .vimrc"

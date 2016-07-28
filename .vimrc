@@ -22,7 +22,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'othree/es.next.syntax.vim'
   Plug 'gavocanov/vim-js-indent'
   Plug 'mxw/vim-jsx'
-  Plug 'posva/vim-vue'
   Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
@@ -133,9 +132,9 @@ call plug#end()
   set undolevels=1000
   set number
   set relativenumber
-  set cursorline
-  set showcmd
-  set lazyredraw
+  set nocursorline
+  set noshowcmd
+  set nolazyredraw
   set ttyfast
   set mouse=a
   set scrolloff=5
@@ -160,9 +159,9 @@ call plug#end()
   " set expandtab
   set shiftround
   set smartindent
-  nnoremap <Leader>l :set list!<Enter>
   " set listchars=tab:»\ ,space:·,trail:-,nbsp:+
   set listchars=tab:»\ ,trail:-,nbsp:+
+  nnoremap <Leader>l :set list!<Enter>
   nnoremap <Leader>ft :set ts=4<Enter> :%retab!<Enter> :set ts=2<Enter> :%retab!<Enter>
 
 "search settings
