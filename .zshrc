@@ -49,7 +49,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm zsh-syntax-highlighting z virtualenv virtualenvwrapper)
+plugins=(git nvm z virtualenv virtualenvwrapper zsh-syntax-highlighting)
 
 # User configuration
 DEFAULT_USER="lakshya"
@@ -96,6 +96,6 @@ fi
 
 # alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias vi="nvim"
-alias vim="vim"
+alias vim="nvim"
 alias zshrc="cd ~/dotfiles && vi .zshrc && source .zshrc"
 alias vimrc="cd ~/dotfiles && vi .vimrc"
