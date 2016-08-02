@@ -20,7 +20,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'othree/html5.vim'
   Plug 'othree/yajs.vim'
   Plug 'othree/es.next.syntax.vim'
-  Plug 'gavocanov/vim-js-indent'
   Plug 'mxw/vim-jsx'
   Plug 'editorconfig/editorconfig-vim'
 
@@ -48,7 +47,9 @@ call plug#end()
   let g:airline_right_sep = ''
 
 "vim-devicons
-  let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+  let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+  let g:webdevicons_enable_airline_tabline = 0
+  let g:webdevicons_enable_airline_statusline = 0
 
 "vim-easymotion
   let g:EasyMotion_do_mapping = 0
