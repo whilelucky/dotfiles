@@ -77,7 +77,7 @@ call plug#end()
   endif
   " stylelint
   if findfile('.stylelintrc', '.;') !=# ''
-    let g:neomake_css_stylelint_exe = $PWD . 'node_modules/.bin/stylelint'
+    let g:neomake_css_stylelint_exe = $PWD . '/node_modules/.bin/stylelint'
     let g:neomake_css_enabled_makers = ['stylelint']
   endif
 
