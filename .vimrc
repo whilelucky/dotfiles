@@ -113,6 +113,19 @@ call plug#end()
 "editorconfig-vim
   let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
+"the_silver_searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+  " Use ag in CtrlP for listing files
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+  " bind \ (backward slash) to grep shortcut
+  command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+  nnoremap \ :Ag<SPACE>
+endif
+
 "============================== GENERAL =============================="
 
 "automatic reloading of .vimrc
@@ -140,7 +153,6 @@ call plug#end()
   set mouse=a
   set scrolloff=5
   filetype plugin indent on
-  nnoremap <Enter> G
   inoremap <Esc> <nop>
   inoremap lk <Esc>
   nnoremap <Leader>w :w<Enter>
