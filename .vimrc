@@ -1,6 +1,7 @@
 "============================== PLUGINS =============================="
 call plug#begin('~/.vim/plugged')
 
+  Plug 'joshdick/onedark.vim'
   Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'vim-airline/vim-airline'
@@ -39,6 +40,7 @@ call plug#end()
   \ }
 
 "airline
+  let g:airline_theme = 'base16'
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#tabline#enabled = 1
   set laststatus=2
@@ -134,7 +136,8 @@ endif
 "colorscheme
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
   set background=dark
-  colorscheme base16-oceanicnext
+  let g:onedark_termcolors=16
+  colorscheme onedark
 
 "settings
   let mapleader="\<Space>"
