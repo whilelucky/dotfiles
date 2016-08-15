@@ -129,7 +129,7 @@ endif
 "============================== GENERAL =============================="
 
 "automatic reloading of .vimrc
-  autocmd! bufwritepost .vimrc so % | AirlineRefresh
+  autocmd! BufWritePost .vimrc so % | AirlineRefresh
 
 "colorscheme
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -156,6 +156,11 @@ endif
   inoremap <Esc> <nop>
   inoremap lk <Esc>
   nnoremap <Leader>w :w<Enter>
+
+"enter key remaps
+  nnoremap <Enter> G
+  xnoremap <Enter> G
+  autocmd! BufReadPost quickfix nnoremap <buffer> <Enter> <Enter>
 
 "stay vmode on indent
   vnoremap < <gv
