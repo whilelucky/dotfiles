@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'editorconfig/editorconfig-vim'
   Plug 'ryanoasis/vim-devicons'
   Plug 'tpope/vim-fugitive'
   Plug 'easymotion/vim-easymotion'
@@ -22,7 +23,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'othree/yajs.vim'
   Plug 'othree/es.next.syntax.vim'
   Plug 'mxw/vim-jsx'
-  Plug 'editorconfig/editorconfig-vim'
+  Plug 'lambdatoast/elm.vim'
 
 call plug#end()
 
