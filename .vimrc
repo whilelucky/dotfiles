@@ -2,12 +2,11 @@
 call plug#begin('~/.vim/plugged')
 
   Plug 'joshdick/onedark.vim'
-  Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+  Plug 'scrooloose/nerdtree'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'editorconfig/editorconfig-vim'
-  Plug 'ryanoasis/vim-devicons'
   Plug 'tpope/vim-fugitive'
   Plug 'easymotion/vim-easymotion'
   Plug 'tpope/vim-surround'
@@ -46,15 +45,10 @@ call plug#end()
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#left_sep = ''
   let g:airline#extensions#tabline#left_alt_sep = ''
-  set laststatus=2
   let g:airline_section_y = ''
   let g:airline_left_sep = ''
   let g:airline_right_sep = ''
-
-"vim-devicons
-  let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
-  let g:webdevicons_enable_airline_tabline = 0
-  let g:webdevicons_enable_airline_statusline = 0
+  set laststatus=2
 
 "vim-easymotion
   let g:EasyMotion_do_mapping = 0
@@ -98,8 +92,8 @@ call plug#end()
   autocmd! BufWritePre * StripWhitespace
 
 "vim-smooth-scroll
-  noremap <silent> <C-l> :call smooth_scroll#up(15, 1, 2)<CR>
-  noremap <silent> <C-k> :call smooth_scroll#down(15, 1, 2)<CR>
+  noremap <silent> <C-l> :call smooth_scroll#up(10, 1, 2)<CR>
+  noremap <silent> <C-k> :call smooth_scroll#down(10, 1, 2)<CR>
 
 "multiple-cursor
   let g:multi_cursor_use_default_mapping=0
@@ -154,13 +148,14 @@ endif
   set relativenumber
   set nocursorline
   set noshowcmd
+  set noshowmode
   set nolazyredraw
   set ttyfast
   set mouse=a
-  set scrolloff=5
+  set scrolloff=20
   filetype plugin indent on
-  inoremap <Esc> <nop>
   inoremap lk <Esc>
+  vnoremap lk <Esc>
   nnoremap <Leader>w :w<Enter>
 
 "enter key remaps
@@ -180,13 +175,10 @@ endif
   set tabstop=2
   set softtabstop=2
   set shiftwidth=2
-  " set expandtab
   set shiftround
   set smartindent
-  " set listchars=tab:»\ ,space:·,trail:-,nbsp:+
   set listchars=tab:»\ ,trail:-,nbsp:+
-  nnoremap <Leader>l :set list!<Enter>
-  nnoremap <Leader>ft :set ts=4<Enter> :%retab!<Enter> :set ts=2<Enter> :%retab!<Enter>
+  nnoremap <Leader>t :set list!<Enter>
 
 "search settings
   set hlsearch
@@ -194,15 +186,11 @@ endif
   set smartcase
   set incsearch
 
-"remap navigation and disable arrow keys
+"remap navigation
   noremap ; l
   noremap l k
   noremap k j
   noremap j h
-  noremap <up> <nop>
-  noremap <down> <nop>
-  noremap <left> <nop>
-  noremap <right> <nop>
 
 "buffer
   set hidden
