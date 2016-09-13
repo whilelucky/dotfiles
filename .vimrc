@@ -7,14 +7,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'editorconfig/editorconfig-vim'
-  Plug 'tpope/vim-fugitive'
   Plug 'easymotion/vim-easymotion'
   Plug 'tpope/vim-surround'
   Plug 'benekastah/neomake'
   Plug 'Valloric/YouCompleteMe'
   Plug 'mattn/emmet-vim'
   Plug 'ntpeters/vim-better-whitespace'
-  Plug 'terryma/vim-smooth-scroll'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'Raimondi/delimitMate'
   Plug 'tpope/vim-commentary'
@@ -91,10 +89,6 @@ call plug#end()
 "better-whitespace
   autocmd! BufWritePre * StripWhitespace
 
-"vim-smooth-scroll
-  noremap <silent> <C-l> :call smooth_scroll#up(10, 1, 2)<CR>
-  noremap <silent> <C-k> :call smooth_scroll#down(10, 1, 2)<CR>
-
 "multiple-cursor
   let g:multi_cursor_use_default_mapping=0
   let g:multi_cursor_next_key='<C-d>'
@@ -155,7 +149,6 @@ endif
   set scrolloff=20
   filetype plugin indent on
   inoremap lk <Esc>
-  vnoremap lk <Esc>
   nnoremap <Leader>w :w<Enter>
 
 "enter key remaps
@@ -167,7 +160,7 @@ endif
   vnoremap < <gv
   vnoremap > >gv
 
-"disable swap files
+"swap files
   set nobackup
   set noswapfile
 
@@ -191,6 +184,9 @@ endif
   noremap l k
   noremap k j
   noremap j h
+  map <C-l> 10l
+  map <C-k> 10k
+
 
 "buffer
   set hidden
