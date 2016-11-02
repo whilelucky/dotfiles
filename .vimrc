@@ -64,11 +64,9 @@ call plug#end()
   " eslint or semistandard
   if findfile('.eslintrc', '.;') !=# ''
     let g:neomake_javascript_eslint_exe =  $PWD . '/node_modules/.bin/eslint'
-    let g:neomake_javascript_enabled_makers = ['eslint']
     let g:neomake_jsx_enabled_makers = ['eslint']
   else
-    let g:neomake_javascript_semistandard_maker = { 'errorformat': '%f:%l:%c: %m' }
-    let g:neomake_jsx_semistandard_maker = { 'errorformat': '%f:%l:%c: %m' }
+    let g:neomake_jsx_semistandard_maker = { 'errorformat': '%W  %f:%l:%c: %m' }
     let g:neomake_javascript_enabled_makers = ['semistandard']
     let g:neomake_jsx_enabled_makers = ['semistandard']
   endif
@@ -148,7 +146,7 @@ endif
   set mouse=a
   set scrolloff=20
   filetype plugin indent on
-  inoremap lk <Esc>
+  inoremap kj <Esc>
   nnoremap <Leader>w :w<Enter>
 
 "enter key remaps
@@ -180,18 +178,14 @@ endif
   set incsearch
 
 "remap navigation
-  noremap ; l
-  noremap l k
-  noremap k j
-  noremap j h
-  map <C-l> 10l
   map <C-k> 10k
+  map <C-j> 10j
 
 
 "buffer
   set hidden
-  nnoremap <Leader>; :bnext<Enter>
-  nnoremap <Leader>j :bprevious<Enter>
+  nnoremap <Leader>l :bnext<Enter>
+  nnoremap <Leader>h :bprevious<Enter>
   nnoremap <Leader>q :bd<Enter>
   au FocusGained,BufEnter * :silent! !
   "au FocusLost,BufLeave * :silent! w
