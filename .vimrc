@@ -123,7 +123,6 @@ endif
   autocmd! BufWritePost .vimrc so % | AirlineRefresh
 
 "colorscheme
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
   set background=dark
   let g:onedark_termcolors=16
   colorscheme onedark
@@ -137,7 +136,7 @@ endif
   set history=1000
   set undolevels=1000
   set number
-  set relativenumber
+  " set relativenumber
   set nocursorline
   set noshowcmd
   set noshowmode
@@ -184,8 +183,8 @@ endif
 
 "buffer
   set hidden
-  nnoremap <Leader>l :bnext<Enter>
-  nnoremap <Leader>h :bprevious<Enter>
+  nnoremap <Leader>k :bnext<Enter>
+  nnoremap <Leader>j :bprevious<Enter>
   nnoremap <Leader>q :bd<Enter>
   au FocusGained,BufEnter * :silent! !
   "au FocusLost,BufLeave * :silent! w
