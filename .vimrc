@@ -148,7 +148,7 @@ endif
   inoremap kj <Esc>
   nnoremap <Leader>w :w<Enter>
 
-"enter key remaps
+"enter key
   nnoremap <Enter> G
   xnoremap <Enter> G
   autocmd! BufReadPost quickfix nnoremap <buffer> <Enter> <Enter>
@@ -156,6 +156,9 @@ endif
 "stay vmode on indent
   vnoremap < <gv
   vnoremap > >gv
+
+"vmode clipboard copy
+  vnoremap <Leader>y :w !pbcopy<Enter><Enter>
 
 "swap files
   set nobackup
@@ -179,7 +182,6 @@ endif
 "remap navigation
   map <C-k> 10k
   map <C-j> 10j
-
 
 "buffer
   set hidden

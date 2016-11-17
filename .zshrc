@@ -98,3 +98,10 @@ alias vi="mvim -v"
 alias vim="mvim -v"
 alias zshrc="cd ~/dotfiles && vi .zshrc && source .zshrc"
 alias vimrc="cd ~/dotfiles && vi .vimrc"
+
+# alias treebo machines
+alias tools="ssh lakshya.ranganath@172.40.10.196"
+alias dev="ssh lakshya.ranganath@172.40.20.210"
+alias staging="ssh lakshya.ranganath@172.40.20.183"
+alias proda="ssh lakshya.ranganath@172.40.10.40"
+alias prodb="ssh lakshya.ranganath@172.40.20.78"
