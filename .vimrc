@@ -158,7 +158,7 @@ endif
   vnoremap > >gv
 
 "vmode clipboard copy
-  vnoremap <Leader>y :w !pbcopy<Enter><Enter>
+  vnoremap y ygv:w !pbcopy<Enter><Enter>
 
 "swap files
   set nobackup
