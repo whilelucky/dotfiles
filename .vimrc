@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'airblade/vim-gitgutter'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'easymotion/vim-easymotion'
   Plug 'tpope/vim-surround'
@@ -20,7 +21,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'othree/yajs.vim'
   Plug 'othree/es.next.syntax.vim'
   Plug 'mxw/vim-jsx'
-  Plug 'lambdatoast/elm.vim'
 
 call plug#end()
 
@@ -47,6 +47,10 @@ call plug#end()
   let g:airline_left_sep = ''
   let g:airline_right_sep = ''
   set laststatus=2
+
+"vim-gitgutter
+  set updatetime=250
+  let g:gitgutter_sign_column_always = 1
 
 "vim-easymotion
   let g:EasyMotion_do_mapping = 0
@@ -145,7 +149,6 @@ endif
   set mouse=a
   set scrolloff=20
   filetype plugin indent on
-  inoremap kj <Esc>
   nnoremap <Leader>w :w<Enter>
 
 "enter key
@@ -158,7 +161,7 @@ endif
   vnoremap > >gv
 
 "vmode clipboard copy
-  vnoremap y ygv:w !pbcopy<Enter><Enter>
+  vnoremap y :y*<Enter>
 
 "swap files
   set nobackup
@@ -185,8 +188,8 @@ endif
 
 "buffer
   set hidden
-  nnoremap <Leader>k :bnext<Enter>
-  nnoremap <Leader>j :bprevious<Enter>
+  nnoremap <Leader>l :bnext<Enter>
+  nnoremap <Leader>h :bprevious<Enter>
   nnoremap <Leader>q :bd<Enter>
   au FocusGained,BufEnter * :silent! !
   "au FocusLost,BufLeave * :silent! w
