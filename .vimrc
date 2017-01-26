@@ -126,9 +126,6 @@ endif
 "automatic reloading of .vimrc
   autocmd! BufWritePost .vimrc so % | AirlineRefresh
 
-"automatic regain iTerm2 focus on quit
-  autocmd VimLeave * :!open -a iTerm2
-
 "colorscheme
   set background=dark
   let g:onedark_termcolors=16
