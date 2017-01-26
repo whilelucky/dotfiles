@@ -37,4 +37,4 @@ Iterm2 theme/colors/fonts
 * In the **Preferences** tab goto the **Profiles** tab and select the appropriate **Profile**
 * In the **Colors** tab, click on the **Color Presets** dropdown and **import *~/dotfiles/iterm2/onedark.itermcolors***
 * Click on the **Color Presets** dropdown and select **onedark**
-* Setup the single font as **Fira Code Retina 11pt**
+* Setup the single font as **Fira Code Retina 12pt**
