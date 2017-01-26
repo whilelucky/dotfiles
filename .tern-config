@@ -1,13 +1,11 @@
 {
   "libs": [
-    "browser",
-    "jquery"
+    "browser"
   ],
   "plugins": {
     "complete_strings": {},
     "modules": {},
     "es_modules": {},
-    "commonjs": {},
-    "angularjs": {}
+    "commonjs": {}
   }
 }
