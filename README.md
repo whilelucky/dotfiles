@@ -9,7 +9,7 @@ Symbolic links
     # installing vim plugins
     vi ~/.vimrc
     :PlugInstall
-    
+
 ---
 
 YouCompleteMe, JavaScript auto completer
@@ -25,15 +25,15 @@ YouCompleteMe, JavaScript auto completer
 
 MacVim for macOS
 
-* Download, open and drag **MacVim** and **mvim** into the Applications directory
-* In the terminal run `mv /Applications/mvim /usr/local/bin/`
-* Add `alias vi="mvim -v"` to **.zshrc** or **.bash_profile** or whatever file is relevant to your terminal setup
+* Download, open and drag both **MacVim** and **mvim** into the Applications directory
+* In a terminal run `mv /Applications/mvim /usr/local/bin/`
+* Add `alias vi="mvim -v"` to **.zshrc** or **.bash_profile** or whichever file is relevant to your terminal setup
 
 ---
 
 Iterm2 theme/colors/fonts
 
-* Please install the  [nightly build of iterm2](https://www.iterm2.com/downloads.html)
+* Download and install the [nightly build of iterm2](https://www.iterm2.com/downloads.html)
 * In the **Preferences** tab goto the **Profiles** tab and select the appropriate **Profile**
 * In the **Colors** tab, click on the **Color Presets** dropdown and **import *~/dotfiles/iterm2/onedark.itermcolors***
 * Click on the **Color Presets** dropdown and select **onedark**
