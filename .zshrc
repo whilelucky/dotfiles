@@ -94,8 +94,8 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-alias vi="mvim -v"
-alias vim="mvim -v"
+alias vi="mvim"
+alias vim="mvim"
 alias zshrc="z dotfiles && vi ~/.zshrc && source .zshrc"
 alias vimrc="z dotfiles && vi ~/.vimrc"
 
