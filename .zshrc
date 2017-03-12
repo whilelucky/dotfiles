@@ -96,8 +96,8 @@ fi
 
 alias vi="mvim -v"
 alias vim="mvim -v"
-alias zshrc="cd ~/dotfiles && vi .zshrc && source .zshrc"
-alias vimrc="cd ~/dotfiles && vi .vimrc"
+alias zshrc="z dotfiles && vi ~/.zshrc && source .zshrc"
+alias vimrc="z dotfiles && vi ~/.vimrc"
 
 # machine specific
 source ~/.alias.sh
