@@ -18,8 +18,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'Raimondi/delimitMate'
   Plug 'tpope/vim-commentary'
   Plug 'othree/html5.vim'
-  Plug 'othree/yajs.vim'
-  Plug 'othree/es.next.syntax.vim'
+  Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
 
 call plug#end()
