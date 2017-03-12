@@ -65,7 +65,7 @@ call plug#end()
     \ 'text': '✖>',
     \ 'texthl': 'SignifySignDelete',
   \ }
-  " eslint or semistandard
+  " eslint / semistandard
   if findfile('.eslintrc', '.;') !=# ''
     let g:neomake_javascript_eslint_exe =  $PWD . '/node_modules/.bin/eslint'
     let g:neomake_jsx_enabled_makers = ['eslint']
@@ -134,14 +134,13 @@ endif
 "settings
   let mapleader="\<Space>"
   syntax enable
-  set spelllang=en
   set nowrap
   set timeoutlen=500 ttimeoutlen=0
   set history=1000
   set undolevels=1000
   set number
   " set relativenumber
-  set nocursorline
+  set cursorline
   set noshowcmd
   set noshowmode
   set nolazyredraw
@@ -193,3 +192,12 @@ endif
   nnoremap <Leader>q :bd<Enter>
   au FocusGained,BufEnter * :silent! !
   "au FocusLost,BufLeave * :silent! w
+
+" gui
+  if has("gui_running")
+    set guioptions=gm
+    set guifont=Fira\ Code\ Retina
+    set macligatures
+    set macthinstrokes
+    set lines=999 columns=999
+  endif
