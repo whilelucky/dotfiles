@@ -1,10 +1,8 @@
 Symbolic links
 
-    # setup vim
-    mv ~/.vim ~/old.vim
-    ln -s ~/dotfiles/.vim ~/.vim
-    mv ~/.vimrc ~/old.vimrc
-    ln -s ~/dotfiles/.vimrc ~/.vimrc
+    # Setup vim
+    mv ~/.vim ~/old.vim && ln -s ~/dotfiles/.vim ~/.vim
+    mv ~/.vimrc ~/old.vimrc && ln -s ~/dotfiles/.vimrc ~/.vimrc
 
     # installing vim plugins
     vi ~/.vimrc
@@ -14,11 +12,11 @@ Symbolic links
 
 YouCompleteMe, JavaScript auto completer
 
-    # installing YouCompleteMe with tern-completer
+    # Setup YouCompleteMe for JavaScript using tern
     cd ~/dotfiles/.vim/plugged/YouCompleteMe
     ./install.py --tern-completer
 
-    # setup global .tern-config
+    # Setup a global .tern-config
     ln -s ~/dotfiles/.tern-config ~/.tern-config
 
 ---
