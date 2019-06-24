@@ -57,7 +57,7 @@ DEFAULT_USER="lakshya"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # MAMP php
-export PATH=/Applications/MAMP/bin/php/php7.0.0/bin:$PATH
+# export PATH=/Applications/MAMP/bin/php/php7.0.0/bin:$PATH
 
 # Postgres.app
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
@@ -65,9 +65,12 @@ export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 # brew install rabbitmq
 export PATH=$PATH:/usr/local/sbin
 
-# android studio tools & sdk
-export ANDROID_HOME=/Users/lakshya/Library/Android/sdk
-export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
+# android studio
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -94,5 +97,5 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-alias zshrc="z dotfiles && vi ~/.zshrc && source .zshrc"
+alias zshrc="z dotfiles && vi ~/.zshrc"
 alias vimrc="z dotfiles && vi ~/.vimrc"
