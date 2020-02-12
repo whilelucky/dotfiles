@@ -4,7 +4,7 @@ Zsh
     chsh -s $(which zsh)
 
     # install ohmyzsh
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
     # symlink .zshrc
     mv ~/.zshrc ~/old.zshrc && ln -s ~/dotfiles/.zshrc ~/.zshrc
