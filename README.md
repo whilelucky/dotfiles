@@ -7,23 +7,11 @@ Zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
     # symlink .zshrc
-    mv ~/.zshrc ~/old.zshrc && ln -s ~/dotfiles/.zshrc ~/.zshrc
+    mv ~/.zshrc ~/old.zshrc && ln -s ~/workspace/github/dotfiles/.zshrc ~/.zshrc
 
     # install zsh plugins
     git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
----
-
-Iterm2
-
-* Download and install the [nightly build of iterm2](https://www.iterm2.com/downloads.html)
-* In the **Preferences** tab goto the **Profiles** tab and select the appropriate **Profile**
-* In the **Colors** tab, click on the **Color Presets** dropdown and **import *~/dotfiles/iterm2/onedark.itermcolors***
-* Click on the **Color Presets** dropdown and select **onedark**
-* Download, install and setup the single font as **[Fira Code Retina](https://github.com/tonsky/FiraCode) 12pt**
-
----
 
 Vim
 
